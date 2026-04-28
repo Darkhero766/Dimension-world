@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimensional World</title>
+    <title>house aframe scene</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-
-</head>
-<body>
-
-    <a-sky color="#ECECEC"></a-sky>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
     
-
-    <a-box color="Red" position="0 -2 5" scale="2 2 2 "></a-box>
-
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="15" height="20" color="#7BC8A4"></a-plane>
-
-    <a-assets>
-
+  </head>
+  <body>
+    <a-scene>
+      <a-assests>
         <a-asset-item id="house" src="house.glb"></a-asset-item>
-    </a-assets>
+      </a-assests>
 
-    <a-light type="ambient" color="#fff"></a-light>
+      <a-entity gltf-model="#house" position="0 0 -5"
+        scale="0.3 0.3 0.3" color="black"></a-entity>
 
-    <a-camera position="0 1.6 0"></a-camera>
+      <a-text value="Hello A-Frame!" position="0 2 -3" color="black"></a-text>
+      
+      
+      <a-box position="3 0 -5" color="red"></a-box>
+      
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="15" height="20" color="#7BC8A4"></a-plane>
 
+      
+      <a-sky color="#ECECEC"></a-sky>
+
+      
+      <a-camera position="0 1.6 0"></a-camera>
+      
+    </a-scene>
     
-
-    
-</body>
-
-
+  </body>
 </html>
-
